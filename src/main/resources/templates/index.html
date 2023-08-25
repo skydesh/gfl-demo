@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Expressions</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/dist/css/bootstrap.css}">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="expression-background">
+    <form action="calculate" method="post">
+        <label for="formula">Expression</label>
+        <input type="text" id="formula" name="expression" class="text-input" required>
+        <input id="calculate-button" type="submit" value="calculate" class="btn btn-primary">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/dist/css/bootstrap.css}">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="expression-background">
+    <a href="/" class="btn btn-info" style="margin:25px">Navigate to check expression page</a>
+    <div class="table">
+        <table class="table table-bordered table-striped">
+            <thead class="table-primary">
+            <tr>
+                <th>Id</th>
+                <th>Expression</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="e : ${expressions}" th:id="'row'+${e.id}">
+                <td th:text="${e.id}"></td>
+                <td th:text="${e.expr}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script th:src="@{webjars/jquery/3.7.0/dist/jquery.js}"></script>
+<script th:src="@{webjars/popperjs__core/2.11.8/dist/umd/popper.js}"></script>
+<script th:src="@{webjars/bootstrap/5.3.0/dist/js/bootstrap.bundle.js}"></script>
+</body>
+</html>
